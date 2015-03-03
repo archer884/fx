@@ -8,14 +8,14 @@
 //! use fx::Fx;
 //!
 //! let sum_of_non_fizz_buzz_values = (1..101)
-//!     .map(default)
-//!     .fold(0, |a,b| a + if let I(n) = b {
+//!     .map(fx::default)
+//!     .fold(0, |a,b| a + if let Fx::I(n) = b {
 //!         n
 //!     } else {
 //!         0
 //!     });
 //!
-//! assert!(sum_of_nfizz_buzz_values == 2632);
+//! assert!(sum_of_non_fizz_buzz_values == 2632);
 //! ```
 
 /// Enum representing value status.
