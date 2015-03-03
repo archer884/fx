@@ -2,12 +2,13 @@
 //!
 //! Instructions: Add to your cargo tomato and go!
 //!
-//! ## Example
+//! # Example
 //!
 //! ```
 //! use fx::Fx;
 //!
-//! let sum_of_non_fizz_buzz_values = (0..101)
+//! let sum_of_non_fizz_buzz_values = (1..101)
+//!     .map(default)
 //!     .fold(0, |a,b| a + if let I(n) = b {
 //!         n
 //!     } else {
@@ -30,7 +31,7 @@ impl Fx {
     pub fn new(n: u32) -> Fx {
         Fx::arbitrary(n, |n| n % 3 == 0, |n| n % 5 == 0)
     }
-    
+
     /// Create new Fx enum using arbitrary FizzBuzz rules.
     pub fn arbitrary<FA, FB>(n: u32, fa: FA, fb: FB) -> Fx
         where FA: Fn(u32) -> bool,
