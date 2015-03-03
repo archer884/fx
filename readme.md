@@ -6,7 +6,7 @@ F(x): FizzBuzz by Cargo
 ## Usage
 
 * `Fx::new(n)` creates a new enum for `n`, with matching condition A as `n % 3 == 0` and matching condition B as `n % 5 == 0`
-* `Fx::arbitrary(n, |n| n % 3 == 0, |n| n % 5 == 0)` does exactlty the same thing, except you can change those predicates out for anything you like.
+* `Fx::arbitrary(n, |n| n % 3 == 0, |n| n % 5 == 0)` does exactly the same thing, except you can change those predicates out for anything you like.
 
 > For full code samples, clone and build documentation using `cargo doc`
 
