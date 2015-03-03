@@ -1,7 +1,7 @@
 F(x): FizzBuzz by Cargo
 =======================
 
-[/r/learnprogramming/](http://www.reddit.com/r/learnprogramming/) has been chattering about FizzBuzz all week long for no apparent reason, so I thought I would just go ahead and solve this problem once and for all. This version will work for FizzBuzz A and B, for arbitrary values of A and B (canonically 3 and 5, respectively).
+[/r/learnprogramming/](http://www.reddit.com/r/learnprogramming/) has been chattering about FizzBuzz all week long for no apparent reason, so I thought I would just go ahead and solve this problem once and for all. This version will work for FizzBuzz A and B for arbitrary values of A and B (canonically 3 and 5, respectively).
 
 ## Usage
 
