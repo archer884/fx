@@ -60,7 +60,7 @@ impl std::fmt::Display for Fx {
 
 /// Convenience method for creating a new default Fx enum.
 pub fn default(n: u32) -> Fx {
-    Fx::new(u32)
+    Fx::new(n)
 }
 
 #[cfg(test)]
