@@ -2,7 +2,17 @@
 //!
 //! Instructions: Add to your cargo tomato and go!
 //!
-//! # Example
+//! # Example 1: Basic fizzbuzz
+//!
+//! ```
+//! use fx::Fx;
+//!
+//! for i in (1..101).map(fx::default) {
+//!     println!("{}", i);
+//! }
+//! ```
+//!
+//! # Example 2: Sum of inverse
 //!
 //! ```
 //! use fx::Fx;
