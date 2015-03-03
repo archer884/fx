@@ -15,7 +15,7 @@
 //!         0
 //!     });
 //!
-//! assert!(sum_of_non_fizz_buzz_values == 2632);
+//! assert!(sum_of_nfizz_buzz_values == 2632);
 //! ```
 
 /// Enum representing value status.
