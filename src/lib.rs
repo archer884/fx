@@ -28,6 +28,7 @@
 //! assert!(sum_of_non_fizz_buzz_values == 2632);
 //! ```
 
+#[macro_export]
 macro_rules! fx {
     ($range:expr) => {
         for i in ($range).map(fx::default) {
