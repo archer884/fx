@@ -28,11 +28,19 @@
 //! assert!(sum_of_non_fizz_buzz_values == 2632);
 //! ```
 
+macro_rules! fx {
+    ($range:expr) => {
+        for i in ($range).map(fx::default) {
+            println!("{}", i);
+        }
+    }
+}
+
 /// Enum representing value status.
 pub enum Fx {
-    Fizz,
-    Buzz,
-    FizzBuzz,
+    Fizz(u32),
+    Buzz(u32),
+    FizzBuzz(u32),
     I(u32),
 }
 
@@ -48,22 +56,21 @@ impl Fx {
               FB: Fn(u32) -> bool
     {
         match (n, fa(n), fb(n)) {
-            (_, true, true) => Fx::FizzBuzz,
-            (_, true, _) => Fx::Fizz,
-            (_, _, true) => Fx::Buzz,
+            (n, true, true) => Fx::FizzBuzz(n),
+            (n, true, _) => Fx::Fizz(n),
+            (n, _, true) => Fx::Buzz(n),
             (n, _, _) => Fx::I(n),
         }
     }
 }
 
-/// Print Fx value to console; no need to futz with formatting.
-/// on the client side.
+/// Print Fx value to console.
 impl std::fmt::Display for Fx {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
-            &Fx::FizzBuzz => write!(f, "FizzBuzz"),
-            &Fx::Fizz => write!(f, "Fizz"),
-            &Fx::Buzz => write!(f, "Buzz"),
+            &Fx::FizzBuzz(_) => write!(f, "FizzBuzz"),
+            &Fx::Fizz(_) => write!(f, "Fizz"),
+            &Fx::Buzz(_) => write!(f, "Buzz"),
             &Fx::I(n) => write!(f, "{}", n),
         }
     }
