@@ -27,6 +27,18 @@
 //!
 //! assert!(sum_of_non_fizz_buzz_values == 2632);
 //! ```
+//!
+//! # Macro use
+//!
+//! The fx! macro takes two forms. The first accepts Rust's range notation, e.g. 1..101 for values
+//! 1 through 100 (the upper bound is exclusive in n..m range notation). The second instead accepts
+//! inclusive lower and upper bounds, e.g. 1 and 100 for values 1 through 100.
+//!
+//! > fx!(1..101);
+//! > fx!(1, 100);
+//!
+//! I mostly did this because it's kind of neat to me that macros wind up serving as a form of poor
+//! man's function overloading. >.>
 
 #[macro_export]
 macro_rules! fx {
@@ -34,7 +46,13 @@ macro_rules! fx {
         for i in ($range).map(fx::default) {
             println!("{}", i);
         }
-    }
+    };
+
+    ($n:expr, $m:expr) => {
+        for i in ($n..($m + 1)).map(fx::default) {
+            println!("{}", i);
+        }
+    };
 }
 
 /// Enum representing value status.
