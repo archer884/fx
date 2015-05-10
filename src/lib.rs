@@ -38,7 +38,8 @@
 //! > fx!(1, 100);
 //!
 //! I mostly did this because it's kind of neat to me that macros wind up serving as a form of poor
-//! man's function overloading. >.>
+//! man's function overloading. I also think it looks cooler as a code sample than the version with
+//! range notation. Who knows what the hell that 101 is for, after all?
 
 #[macro_export]
 macro_rules! fx {
