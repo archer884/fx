@@ -7,5 +7,9 @@ F(x): FizzBuzz by Cargo
 
 * `Fx::new(n)` creates a new enum for `n`, with matching condition A as `n % 3 == 0` and matching condition B as `n % 5 == 0`
 * `Fx::arbitrary(n, |n| n % 3 == 0, |n| n % 5 == 0)` does exactly the same thing, except you can change those predicates out for anything you like.
+* `fx!(n..m)` (using Rust range notation) is a macro that expands to the default fizzbuzz implementation.
+* `fx!(n, m)` (with inclusive lower and upper bounds) is a macro that expands to the default fizzbuzz implementation.
+
+(That last macro option mainly exists because I thought it looked more photogenic than the first.)
 
 > For full code samples, clone and build documentation using `cargo doc`
