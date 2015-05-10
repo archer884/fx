@@ -9,7 +9,3 @@ F(x): FizzBuzz by Cargo
 * `Fx::arbitrary(n, |n| n % 3 == 0, |n| n % 5 == 0)` does exactly the same thing, except you can change those predicates out for anything you like.
 
 > For full code samples, clone and build documentation using `cargo doc`
-
-## Possible enhancements
-
-I'd like to figure out a way this library can help you (easily; you can already do it with the library if you really want) find the sum of the fizz buzz values. Finding the sum of their inverse is cake, of course. Might need to add a new type for that, since it would be a breaking change to the current one.
